@@ -8,6 +8,7 @@
 
 ## Version 0.6.0 (2014-08-19T21:12:07Z)
 
+* add `allowOverflow` option
 * add `changeLineHeight` (functionality to resize line-height of parent)
 * greatly improved code readability and comments
 
