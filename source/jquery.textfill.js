@@ -45,7 +45,8 @@
 			complete         : null, // callback when all is done
 			explicitWidth    : null,
 			explicitHeight   : null,
-			changeLineHeight : false
+			changeLineHeight : false,
+			allowOverflow    : false // If true, text will stay at minFontPixels but overflow container w/out failing
 		};
 
 		var Opts = $.extend(defaults, options);
@@ -285,7 +286,7 @@
 			// Oops, something wrong happened!
 			// We weren't supposed to exceed the original size
 			if ((ourText.width()  > maxWidth) ||
-				(ourText.height() > maxHeight && !Opts.widthOnly)) {
+				(ourText.height() > maxHeight && !Opts.widthOnly && !Opts.allowOverflow)) {
 
 				ourText.css('font-size', oldFontSize);
 
