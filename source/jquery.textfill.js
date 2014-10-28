@@ -285,7 +285,7 @@
 
 			// Oops, something wrong happened!
 			// We weren't supposed to exceed the original size
-			if ((ourText.width()  > maxWidth) ||
+			if ((ourText.width()  > maxWidth && !Opts.allowOverflow) ||
 				(ourText.height() > maxHeight && !Opts.widthOnly && !Opts.allowOverflow)) {
 
 				ourText.css('font-size', oldFontSize);
